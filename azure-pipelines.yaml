@@ -84,11 +84,11 @@ stages:
 
 - stage: Apply
   dependsOn: Plan
-  condition: and(succeeded(), in(variables['Build.SourceBranch'], 'refs/heads/master', 'refs/heads/develop'))
+  condition: and(succeeded(), in(variables['Build.SourceBranch'], 'refs/heads/main', 'refs/heads/develop'))
   variables:
-    ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/master') }}:
+    ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/main') }}:
       environment: 'prod'
-    ${{ if ne(variables['Build.SourceBranch'], 'refs/heads/master') }}:
+    ${{ if ne(variables['Build.SourceBranch'], 'refs/heads/main') }}:
       environment: 'dev'
   jobs:
     - deployment: DeployInfrastructure
