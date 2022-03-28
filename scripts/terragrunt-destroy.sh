@@ -4,6 +4,6 @@
 
 #!/usr/bin/env bash
 
-terragrunt destroy-all --terragrunt-working-dir live/dev
+terragrunt destroy-all --terragrunt-working-dir
 
 
