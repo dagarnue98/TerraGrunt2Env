@@ -122,3 +122,8 @@ stages:
                 targetPath: '$(Build.ArtifactStagingDirectory)'
                 ArtifactName: 'Apply'
               displayName: 'Publish apply artifact'
+
+            - task: Bash@3
+              inputs:
+                filePath: './scripts/terragrunt-destroy.sh'
+              displayName: 'Run terragrunt destroy-all'
