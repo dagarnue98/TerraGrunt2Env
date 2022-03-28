@@ -103,6 +103,7 @@ stages:
             - template: download-terragrunt.yaml
 
             - script: chmod +x ./scripts/terragrunt-apply.sh
+            - script: chmod +x ./scripts/terragrunt-destroy.sh
               displayName: 'Enable script permissions'
 
             - task: Bash@3
