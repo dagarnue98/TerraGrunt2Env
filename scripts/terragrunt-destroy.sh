@@ -8,6 +8,6 @@ set -euo pipefail
 
 
 # Run apply all and display output both to terminal and the log file temp.log
-terragrunt run-all destroy --terragrunt-working-dir 
+terragrunt run-all destroy
 
 
