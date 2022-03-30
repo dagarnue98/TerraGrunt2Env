@@ -103,7 +103,7 @@ stages:
             - template: download-terragrunt.yaml
 
             - script: chmod +x ./scripts/terragrunt-apply.sh
-            - script: chmod +x ./scripts/terragrunt-destroy.sh
+            - script: chmod +x ./scripts/terragrunt-apply-prod.sh
               displayName: 'Enable script permissions'
 
             - task: Bash@3
@@ -124,7 +124,4 @@ stages:
                 ArtifactName: 'Apply'
               displayName: 'Publish apply artifact'
 
-            - task: Bash@3
-              inputs:
-                filePath: './scripts/terragrunt-destroy.sh'
-              displayName: 'Run terragrunt destroy-all'
+            
